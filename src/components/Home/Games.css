@@ -92,6 +92,6 @@
 
 @media (max-width: 480px) {
   .game-card {
-    width: 80%; /* Uma carta por linha em telas muito pequenas */
+    width: 40%; /* Uma carta por linha em telas muito pequenas */
   }
 }

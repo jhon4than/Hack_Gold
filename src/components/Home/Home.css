@@ -1,4 +1,4 @@
-/* Home.css */
+/* Estilos padrão */
 .background {
   flex: 1;
   background-size: cover;
@@ -20,7 +20,6 @@
   width: 280px;
   height: 280px;
   margin-top: 40px;
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); */
 }
 
 .textContainer {
@@ -28,7 +27,6 @@
   border-radius: 15px;
   padding: 15px;
   margin-top: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .welcomeText {
@@ -51,7 +49,7 @@
 
 .videoPrompt {
   margin-top: 5px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   font-size: 18px;
   color: black;
   text-align: center;
@@ -64,4 +62,85 @@
   border-radius: 15px;
   border: 2px solid gold;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .background {
+    /* Ensure the background covers the entire area */
+    background-size: cover;
+  }
+
+  .centerImage {
+    /* Scale the image to fit smaller screens */
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .textContainer {
+    /* Adjust padding and margins for smaller screens */
+    padding: 10px;
+    margin-top: 5px;
+  }
+
+  .welcomeText,
+  .descriptionText,
+  .videoPrompt {
+    /* Scale down text sizes for smaller screens */
+    font-size: calc(100% - 2px);
+  }
+
+  .video {
+    /* Ensure video scales down */
+    width: 100%;
+    height: auto;
+    margin: 10px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .background {
+    /* Further adjustments if needed for smaller backgrounds */
+  }
+
+  .centerImage {
+    /* Reduce the size of the logo image even more for very small screens */
+    width: 150px; /* Example size, adjust as needed */
+    height: 150px; /* Maintain the aspect ratio */
+    margin-top: 10px;
+  }
+
+  .textContainer {
+    /* Tighten padding and margin to utilize space better */
+    padding: 5px;
+    margin-top: 3px;
+  }
+
+  .welcomeText {
+    /* Reduce font size for main welcome text */
+    font-size: 18px; /* Example size, adjust as needed */
+  }
+
+  .descriptionText {
+    /* Reduce font size for description text */
+    font-size: 14px; /* Example size, adjust as needed */
+    padding: 5px; /* Adjust padding to match the smaller text */
+  }
+
+  .videoPrompt {
+    /* Adjust the prompt text size and margin */
+    font-size: 16px; /* Example size, adjust as needed */
+    margin-bottom: 15px;
+  }
+
+  .video {
+    /* Ensure the video container fits small screens */
+    width: 50%; /* Take up full container width */
+    height: 390px; /* Adjust height automatically */
+    margin-bottom: 20px; /* Adjust bottom margin */
+  }
+
+  /* You might also want to adjust other elements here
+     to make sure they fit well on the screen and are usable.
+     Consider the size of buttons, input fields, and any other interactive elements. */
 }
