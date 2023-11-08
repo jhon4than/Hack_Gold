@@ -7,7 +7,9 @@ function FootballStudio() {
   const [directionColor, setDirectionColor] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [lastResults, setLastResults] = useState([]);
-  const [webUrl, setWebUrl] = useState("https://afiliados.mmabet.com/visit/?bta=38874&nci=5343");
+  const [webUrl, setWebUrl] = useState(
+    "https://afiliados.mmabet.com/visit/?bta=38874&nci=5343"
+  );
   const [loadingMessage, setLoadingMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
@@ -18,8 +20,11 @@ function FootballStudio() {
     setLoadingMessage("Analisando a entrada ao vivo. Por favor, aguarde...");
     setErrorMessage("");
     try {
-      const response = await axios.get("http://54.39.112.34:5000/api/football-studio");
+      const response = await axios.get(
+        "https://apifree.scrapingcasinos.com//Evolution/Rodadas/TopCard000000001.txt"
+      );
       const data = response.data;
+      console.log(data);
       setLastResults(data.results.slice(0, 5));
       checkStrategy(data.results);
     } catch (error) {
