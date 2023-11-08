@@ -93,10 +93,35 @@
   margin-bottom: 40px;
 }
 
-.loading-text {
-  /* Estilos para o texto de carregamento, por exemplo: */
-  font-weight: bold;
-  color: #fff;
+.spinner {
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Cor mais clara para o spinner */
+  border-top: 2px solid #fff; /* Cor mais escura para a parte superior do spinner */
+  border-radius: 50%;
+  width: 12px;
+  height: 12px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Classe para posicionar o spinner ao lado do botão */
+.spinner-container {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 

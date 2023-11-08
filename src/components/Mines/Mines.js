@@ -109,13 +109,19 @@ function Mines() {
           onClick={handleHackClick}
           disabled={isSinalHacked || isHacking}
         >
-          {isHacking
-            ? "Hackeando Sinal Aguarde..."
-            : isSinalHacked
-            ? "SINAL HACKEADO"
-            : "HACKEAR SINAL"}
+          {isHacking ? (
+            <>
+              Hackeando Sinal Aguarde...
+              <span className="spinner-container">
+                <div className="spinner"></div>
+              </span>
+            </>
+          ) : isSinalHacked ? (
+            "SINAL HACKEADO"
+          ) : (
+            "HACKEAR SINAL"
+          )}
         </button>
-        {isLoading && <div className="loading">Carregando...</div>}
         {/* Substitua WebView por iframe na web */}
         <iframe src={webUrl} title="Conteúdo Web" className="web-view" />
       </div>

@@ -72,7 +72,7 @@ function Tiger() {
       setIsTimerActive(true);
       setIsLoading(false);
       setIsButtonDisabled(true);
-    }, 3000);
+    }, 9000);
   };
 
   return (
@@ -110,7 +110,7 @@ function Tiger() {
         </button>
         {isLoading && (
           <div className="tiger-loading">
-            <span>Carregando...</span>
+            <span>O Robô está analisando uma entrada...</span>
           </div>
         )}
         <iframe src={webUrl} title="Conteúdo Web" className="tiger-webview" />
