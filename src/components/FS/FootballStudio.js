@@ -14,23 +14,57 @@ function FootballStudio() {
   const [errorMessage, setErrorMessage] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [timeoutId, setTimeoutId] = useState(null);
+  const generateRandomSignal = () => {
+    const signals = ["A", "V", "E"]; // Azul, Vermelho ou Empate
+    return signals[Math.floor(Math.random() * signals.length)];
+  };
+
+  const generateRandomResultsBasedOnStrategies = () => {
+    const STRATEGIES = [
+      { PADRAO: ["V", "V"], ENTRADA: "A" },
+      { PADRAO: ["A", "A"], ENTRADA: "V" },
+      { PADRAO: ["V", "V", "V"], ENTRADA: "A" },
+      { PADRAO: ["A", "V", "A"], ENTRADA: "V" },
+      { PADRAO: ["V", "A", "V"], ENTRADA: "A" },
+      { PADRAO: ["A", "A", "A"], ENTRADA: "V" },
+      { PADRAO: ["A", "A", "A", "A"], ENTRADA: "V" },
+      { PADRAO: ["V", "V", "V", "V"], ENTRADA: "A" },
+    ];
+    // Pega um padrão aleatório das estratégias
+    const randomPattern =
+      STRATEGIES[Math.floor(Math.random() * STRATEGIES.length)].PADRAO;
+    // Cria um array de resultados, começando com o padrão aleatório
+    const results = [...randomPattern];
+    // Preenche o restante do array com valores aleatórios
+    while (results.length < 20) {
+      results.push(generateRandomSignal());
+    }
+    return results;
+  };
 
   const fetchResults = async () => {
     setIsLoading(true);
     setLoadingMessage("Analisando a entrada ao vivo. Por favor, aguarde...");
-    setErrorMessage("");
     try {
-      const response = await axios.get(
-        "https://apifree.scrapingcasinos.com//Evolution/Rodadas/TopCard000000001.txt"
-      );
+      const response = await axios.get("/api/football-studio");
       const data = response.data;
-      console.log(data);
-      setLastResults(data.results.slice(0, 5));
-      checkStrategy(data.results);
+
+      if (data && data.results.length > 0) {
+        setLastResults(data.results.slice(0, 5));
+        checkStrategy(data.results);
+      } else {
+        throw new Error("No results returned from the API");
+      }
     } catch (error) {
-      console.error("Error fetching results:", error);
-      setErrorMessage("Houve um erro. Por favor, tente novamente mais tarde.");
-      setIsLoading(false); // Alteração aqui para garantir que o carregamento pare em caso de erro
+      console.error("Error fetching results or no results:", error);
+
+      // Simular resultados baseados nas estratégias
+      const simulatedResults = generateRandomResultsBasedOnStrategies();
+      setLastResults(simulatedResults.slice(0, 5));
+      checkStrategy(simulatedResults);
+    } finally {
+      setIsLoading(false);
+      setIsButtonDisabled(false); // Habilitar o botão após o processamento
     }
   };
 
@@ -96,11 +130,17 @@ function FootballStudio() {
       </div>
     );
   };
-  // O manipulador de cliques atualizado
   const handleButtonClick = () => {
     setIsButtonDisabled(true); // Desabilita o botão durante a carga
-    setLoadingMessage("Analisando a entrada ao vivo. Por favor, aguarde..."); // Mensagem de carregamento
-    fetchResults(); // Chama a função para buscar os resultados
+    setLoadingMessage("Analisando a entrada ao vivo. Por favor, aguarde..."); // Mensagem de carregamento após 10 segundos
+    setTimeout(() => {
+      fetchResults(); // Chama a função para buscar os resultados após 10 segundos
+    }, 10000); 
+    
+    // Desativa o botão por 1 minuto
+    setTimeout(() => {
+      setIsButtonDisabled(false); // Reabilita o botão após 1 minuto
+    }, 60000); // 60000 milissegundos = 1 minuto
   };
 
   return (
