@@ -64,7 +64,6 @@ function FootballStudio() {
       checkStrategy(simulatedResults);
     } finally {
       setIsLoading(false);
-      setIsButtonDisabled(false); // Habilitar o botão após o processamento
     }
   };
 
@@ -103,7 +102,6 @@ function FootballStudio() {
         setTimeout(() => {
           // Aguardar antes de desativar o estado de carregamento
           setIsLoading(false);
-          setIsButtonDisabled(false);
         }, 3000); // Aguarda 3 segundos antes de atualizar os estados
         break;
       }
@@ -135,8 +133,8 @@ function FootballStudio() {
     setLoadingMessage("Analisando a entrada ao vivo. Por favor, aguarde..."); // Mensagem de carregamento após 10 segundos
     setTimeout(() => {
       fetchResults(); // Chama a função para buscar os resultados após 10 segundos
-    }, 10000); 
-    
+    }, 10000);
+
     // Desativa o botão por 1 minuto
     setTimeout(() => {
       setIsButtonDisabled(false); // Reabilita o botão após 1 minuto
