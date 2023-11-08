@@ -47,6 +47,14 @@ const Bonus = () => {
           >
             <FaDownload /> Baixar PDF de Bônus
           </button>
+          <button
+            onClick={() =>
+              window.open("https://www.jhonmeireles.com.br/",
+              "_blank")
+            }
+          >
+            Site desenvolvido por Jhon Dev
+          </button>
         </div>
       </div>
     </div>
