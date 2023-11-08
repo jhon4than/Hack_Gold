@@ -18,7 +18,7 @@ function FootballStudio() {
     setLoadingMessage("Analisando a entrada ao vivo. Por favor, aguarde...");
     setErrorMessage("");
     try {
-      const response = await axios.get("/api/football-studio");
+      const response = await axios.get("http://54.39.112.34:5000/api/football-studio");
       const data = response.data;
       setLastResults(data.results.slice(0, 5));
       checkStrategy(data.results);
