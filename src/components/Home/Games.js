@@ -7,6 +7,10 @@ import minesImg from "../../imgs/mines.jpeg";
 import fortuneImg from "../../imgs/fortune.jpg";
 import bacImg from "../../imgs/bacbo.jpg";
 import aviatorImg from "../../imgs/aviator.jpeg";
+import mouseimg from "../../imgs/mouse.jpg";
+import fortuneoximg from "../../imgs/fortune-ox.jpg";
+import rabbitimg from "../../imgs/fortunerabbit.jpeg";
+import dragontigerimg from "../../imgs/dragontiger.jpeg";
 import backgroundImg from "../../assets/img03.png";
 import HeaderLogo from "../Home/headerLogo";
 
@@ -34,7 +38,10 @@ function Games() {
     { name: "Football-studio", img: cardsImg, available: true },
     { name: "Mines", img: minesImg, available: true },
     { name: "Tiger", img: fortuneImg, available: true },
-    { name: "BacBo", img: bacImg, available: false },
+    { name: "Mouse", img: mouseimg, available: false },
+    { name: "FortuneOx", img: fortuneoximg, available: false },
+    { name: "Rabbit", img: rabbitimg, available: false },
+    { name: "DragonTiger", img: dragontigerimg, available: false },
     { name: "Aviator", img: aviatorImg, available: false },
   ];
 
