@@ -99,10 +99,7 @@
 }
 
 @media (max-width: 480px) {
-  .background {
-    /* Further adjustments if needed for smaller backgrounds */
-  }
-
+ 
   .centerImage {
     /* Reduce the size of the logo image even more for very small screens */
     width: 150px; /* Example size, adjust as needed */
