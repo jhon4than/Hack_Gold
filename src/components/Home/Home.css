@@ -7,19 +7,24 @@
 .scrollContainer {
   flex: 1;
   overflow-y: auto;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
+/* Isso já está correto, mas certifique-se de que não há margens ou padding que afetem a centralização */
 .container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  max-width: 100vw;
+  overflow-x: hidden;
+  box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura */
 }
 
-.centerImage {
-  width: 280px;
-  height: 280px;
-  margin-top: 40px;
+/* Certifique-se de que não há margem desnecessária nos elementos filhos que possa deslocá-los */
+.centerImage, .textContainer, .video {
+  margin: 0 auto; /* Isso centralizará os elementos horizontalmente */
 }
 
 .textContainer {
@@ -130,12 +135,12 @@
     margin-bottom: 15px;
   }
 
-  .video {
-    /* Ensure the video container fits small screens */
-    width: 50%; /* Take up full container width */
-    height: 390px; /* Adjust height automatically */
-    margin-bottom: 20px; /* Adjust bottom margin */
-  }
+ /* Ajustes para telas menores */
+ .video {
+  width: 70%; /* Você pode ajustar para 90% ou qualquer valor que se encaixe bem */
+  height: auto; /* Mantém a proporção do vídeo */
+  margin-bottom: 20px; /* Ajusta a margem inferior conforme necessário */
+}
 
   /* You might also want to adjust other elements here
      to make sure they fit well on the screen and are usable.
