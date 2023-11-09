@@ -57,7 +57,7 @@ function Login() {
     <div className="login-container">
       <img src={LogoMain} className="login-logo" alt="Logo" />
       <div className="login-form">
-        <h1 className="login-title">Login</h1>
+        <h1 className="login-title">Cadastro</h1>
         <input
           type="text"
           placeholder="Email"
