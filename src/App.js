@@ -1,26 +1,27 @@
-import React from 'react';
+import React from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   NavLink,
   useLocation,
-} from 'react-router-dom';
-import { FaHome, FaDice, FaGift, FaArrowLeft } from 'react-icons/fa';
-import './App.css';
+} from "react-router-dom";
+import { FaHome, FaDice, FaGift, FaArrowLeft } from "react-icons/fa";
+import PrivateRoute from "./components/Home/PrivateRoute";
+import "./App.css";
 
 // Importe seus componentes da Web aqui
-import Home from './components/Home/Home';
-import Games from './components/Home/Games';
-import MinesScreen from './components/Mines/Mines';
-import TigerScreen from './components/Tiger/Tiger';
-import FootballStudioScreen from './components/FS/FootballStudio';
-import BonusScreen from './components/Home/Bonus';
-import MouseScreen from './components/Mouse/Mouse';
-
+import Home from "./components/Home/Home";
+import Games from "./components/Home/Games";
+import MinesScreen from "./components/Mines/Mines";
+import TigerScreen from "./components/Tiger/Tiger";
+import FootballStudioScreen from "./components/FS/FootballStudio";
+import BonusScreen from "./components/Home/Bonus";
+import MouseScreen from "./components/Mouse/Mouse";
+import Login from "./components/Home/Login";
 
 // As linhas dos componentes importados estão comentadas pois presumo que ainda não foram convertidos ou implementados.
-import HeaderLogo from './components/Home/headerLogo';
+import HeaderLogo from "./components/Home/headerLogo";
 
 // Este componente renderiza a barra de navegação inferior
 const BottomTabBar = () => {
@@ -29,20 +30,25 @@ const BottomTabBar = () => {
 
   // Função para determinar se o link está ativo
   const getNavLinkClass = (path) => {
-    return location.pathname === path ? 'tab-item active' : 'tab-item';
+    return location.pathname === path ? "tab-item active" : "tab-item";
   };
+
+  // Exiba o BottomTabBar apenas em rotas diferentes de "/login"
+  if (location.pathname === "/login") {
+    return null;
+  }
 
   return (
     <div className="bottom-tab-bar">
-      <NavLink to="/" className={getNavLinkClass('/')}>
+      <NavLink to="/" className={getNavLinkClass("/")}>
         <FaHome size={20} />
         <span>Inicio</span>
       </NavLink>
-      <NavLink to="/games" className={getNavLinkClass('/games')}>
+      <NavLink to="/games" className={getNavLinkClass("/games")}>
         <FaDice size={20} />
         <span>Jogos</span>
       </NavLink>
-      <NavLink to="/bonus" className={getNavLinkClass('/bonus')}>
+      <NavLink to="/bonus" className={getNavLinkClass("/bonus")}>
         <FaGift size={20} />
         <span>Bônus</span>
       </NavLink>
@@ -56,8 +62,8 @@ const Header = () => {
 
   return (
     <header>
-      {location.pathname === '/' ? null : <HeaderLogo />}
-      {location.pathname !== '/' && location.pathname !== '/bonus' && (
+      {location.pathname === "/" ? null : <HeaderLogo />}
+      {location.pathname !== "/" && location.pathname !== "/bonus" && (
         <NavLink to="/games" className="back-button">
           <FaArrowLeft size={20} />
         </NavLink>
@@ -70,18 +76,29 @@ const Header = () => {
 const App = () => {
   return (
     <Router>
-      <Routes> {/* Use Routes aqui */}
-        <Route path="/" element={<Home />} />
-        <Route path="/games" element={<Games />} />
-        <Route path="/games/mines" element={<MinesScreen />} />
-        <Route path="/games/tiger" element={<TigerScreen />} />
-        <Route path="/games/football-studio" element={<FootballStudioScreen />} />
-        <Route path="/bonus" element={<BonusScreen />} />
-        <Route path="/games/mouse" element={<MouseScreen />} />
-        
+      <Routes>
+        {" "}
+        {/* Use Routes aqui */}
+        <Route path="/login" element={<Login />} />
+        <Route
+          path="/"
+          element={
+            <PrivateRoute>
+              <Home />
+            </PrivateRoute>
+          }
+        />
+        <Route path="/games" element={<PrivateRoute><Games /></PrivateRoute>} />
+        <Route path="/games/mines" element={<PrivateRoute><MinesScreen /></PrivateRoute>} />
+        <Route path="/games/tiger" element={<PrivateRoute><TigerScreen /></PrivateRoute>} />
+        <Route
+          path="/games/football-studio"
+          element={<PrivateRoute><FootballStudioScreen /></PrivateRoute>}
+        />
+        <Route path="/bonus" element={<PrivateRoute><BonusScreen /></PrivateRoute>} />
+        <Route path="/games/mouse" element={<PrivateRoute><MouseScreen /></PrivateRoute>} />
       </Routes>
       <BottomTabBar />
-    
     </Router>
   );
 };
