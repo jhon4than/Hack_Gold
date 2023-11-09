@@ -162,6 +162,11 @@
   .mouse-logo,
   .mouse-webview {
     width: 100%;
-    height: auto;
+    height: 700px; /* Ajuste a altura conforme necessário */
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 40px;
   }
 }
