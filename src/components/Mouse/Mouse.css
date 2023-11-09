@@ -1,0 +1,166 @@
+.mouse-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('../../assets/pgs_fortunemouse.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.mouse-container {
+  width: 90%;
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.mouse-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.mouse-float-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.mouse-entrada-text,
+.mouse-info-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 10px;
+  white-space: pre-line;
+}
+
+.mouse-button {
+  padding: 0; /* Remove o preenchimento para que a imagem do botão defina o tamanho */
+  border: none;
+  background: none; /* Remove o fundo padrão do botão */
+  cursor: pointer;
+}
+
+.mouse-spin-button {
+  animation: spin 2s linear infinite;
+}
+
+.mouse-button-image {
+  /* se necessário, defina a altura e a largura, ou deixe como está para usar o tamanho padrão da imagem */
+  display: block; /* garante que a imagem do botão preencha todo o espaço do botão */
+}
+
+.mouse-button-spin {
+  animation: spin 5s linear infinite;
+}
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-bar {
+  width: 50px; /* ou qualquer tamanho que você preferir */
+  height: 50px; /* mantenha a proporção 1:1 para um círculo */
+}
+
+.probabilidade-info {
+  display: block;
+  align-items: center;
+  margin-left: 20px; /* espaço entre o progresso circular e o texto */
+}
+
+.alerta-probabilidade-baixa {
+  display: block;
+  color: red;
+  font-size: 16px;
+}
+.hidden {
+  display: none;
+}
+.probabilidade-texto {
+  /* Adicione estilos conforme necessário */
+ 
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px; /* Espaço entre a probabilidade e o alerta */
+}
+.probabilidade-faixa {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.probabilidade-alta {
+  color: green;
+}
+
+.probabilidade-media {
+  color: orange;
+}
+
+.probabilidade-baixa {
+  color: red;
+}
+
+.probabilidade-texto {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.aviso {
+  color: red;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.mouse-loading {
+  color: black;
+  font-weight: bold;
+}
+
+.mouse-webview {
+  width: 100%;
+  height: 600px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .mouse-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mouse-container {
+    width: 100%;
+    padding: 15px;
+  }
+  .mouse-logo,
+  .mouse-webview {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -16,6 +16,7 @@ import MinesScreen from './components/Mines/Mines';
 import TigerScreen from './components/Tiger/Tiger';
 import FootballStudioScreen from './components/FS/FootballStudio';
 import BonusScreen from './components/Home/Bonus';
+import MouseScreen from './components/Mouse/Mouse';
 
 
 // As linhas dos componentes importados estão comentadas pois presumo que ainda não foram convertidos ou implementados.
@@ -76,6 +77,7 @@ const App = () => {
         <Route path="/games/tiger" element={<TigerScreen />} />
         <Route path="/games/football-studio" element={<FootballStudioScreen />} />
         <Route path="/bonus" element={<BonusScreen />} />
+        <Route path="/games/mouse" element={<MouseScreen />} />
         
       </Routes>
       <BottomTabBar />
