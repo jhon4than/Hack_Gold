@@ -80,7 +80,7 @@ function Login() {
       <footer className="login-footer">
         Desenvolvido por{" "}
         <a
-          href="https://seu-site.com"
+          href="https://www.jhonmeireles.com.br/"
           target="_blank"
           rel="noopener noreferrer"
         >
