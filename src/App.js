@@ -9,6 +9,7 @@ import {
 import { FaHome, FaDice, FaGift, FaArrowLeft } from "react-icons/fa";
 import PrivateRoute from "./components/Home/PrivateRoute";
 import "./App.css";
+import FacebookPixel from "./FacebookPixel";
 
 // Importe seus componentes da Web aqui
 import Home from "./components/Home/Home";
@@ -75,31 +76,73 @@ const Header = () => {
 // Este é o componente de aplicativo principal
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        {" "}
-        {/* Use Routes aqui */}
-        <Route path="/login" element={<Login />} />
-        <Route
-          path="/"
-          element={
-            <PrivateRoute>
-              <Home />
-            </PrivateRoute>
-          }
-        />
-        <Route path="/games" element={<PrivateRoute><Games /></PrivateRoute>} />
-        <Route path="/games/mines" element={<PrivateRoute><MinesScreen /></PrivateRoute>} />
-        <Route path="/games/tiger" element={<PrivateRoute><TigerScreen /></PrivateRoute>} />
-        <Route
-          path="/games/football-studio"
-          element={<PrivateRoute><FootballStudioScreen /></PrivateRoute>}
-        />
-        <Route path="/bonus" element={<PrivateRoute><BonusScreen /></PrivateRoute>} />
-        <Route path="/games/mouse" element={<PrivateRoute><MouseScreen /></PrivateRoute>} />
-      </Routes>
-      <BottomTabBar />
-    </Router>
+    <>
+      <FacebookPixel />
+      <Router>
+        <Routes>
+          {" "}
+          {/* Use Routes aqui */}
+          <Route path="/login" element={<Login />} />
+          <Route
+            path="/"
+            element={
+              <PrivateRoute>
+                <Home />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/games"
+            element={
+              <PrivateRoute>
+                <Games />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/games/mines"
+            element={
+              <PrivateRoute>
+                <MinesScreen />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/games/tiger"
+            element={
+              <PrivateRoute>
+                <TigerScreen />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/games/football-studio"
+            element={
+              <PrivateRoute>
+                <FootballStudioScreen />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/bonus"
+            element={
+              <PrivateRoute>
+                <BonusScreen />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/games/mouse"
+            element={
+              <PrivateRoute>
+                <MouseScreen />
+              </PrivateRoute>
+            }
+          />
+        </Routes>
+        <BottomTabBar />
+      </Router>
+    </>
   );
 };
 
