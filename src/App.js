@@ -19,6 +19,7 @@ import TigerScreen from "./components/Tiger/Tiger";
 import FootballStudioScreen from "./components/FS/FootballStudio";
 import BonusScreen from "./components/Home/Bonus";
 import MouseScreen from "./components/Mouse/Mouse";
+import FortuneOx from "./components/FortuneOx/FortuneOx";
 import Login from "./components/Home/Login";
 
 // As linhas dos componentes importados estão comentadas pois presumo que ainda não foram convertidos ou implementados.
@@ -120,6 +121,14 @@ const App = () => {
             element={
               <PrivateRoute>
                 <FootballStudioScreen />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/games/fortuneox"
+            element={
+              <PrivateRoute>
+                <FortuneOx />
               </PrivateRoute>
             }
           />

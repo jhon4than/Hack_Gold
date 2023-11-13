@@ -31,6 +31,9 @@ function Games() {
       case "Mouse":
         navigate("/games/mouse");
         break;
+      case "FortuneOx":
+        navigate("/games/fortuneox");
+        break;
       // Adicione outros jogos aqui conforme necessário...
       default:
         console.warn("No route found for:", gameName);
@@ -42,7 +45,7 @@ function Games() {
     { name: "Mines", img: minesImg, available: true },
     { name: "Tiger", img: fortuneImg, available: true },
     { name: "Mouse", img: mouseimg, available: true },
-    { name: "FortuneOx", img: fortuneoximg, available: false },
+    { name: "FortuneOx", img: fortuneoximg, available: true },
     { name: "Rabbit", img: rabbitimg, available: false },
     { name: "DragonTiger", img: dragontigerimg, available: false },
     { name: "Aviator", img: aviatorImg, available: false },
