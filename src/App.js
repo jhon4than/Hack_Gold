@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -21,6 +21,9 @@ import BonusScreen from "./components/Home/Bonus";
 import MouseScreen from "./components/Mouse/Mouse";
 import FortuneOx from "./components/FortuneOx/FortuneOx";
 import Login from "./components/Home/Login";
+import ProtectedPage from "./components/Admin/ProtectedPage";
+import Users from "./components/Admin/Users";
+import ProtectAdmin from "./components/Admin/ProtectAdmin";
 
 // As linhas dos componentes importados estão comentadas pois presumo que ainda não foram convertidos ou implementados.
 import HeaderLogo from "./components/Home/headerLogo";
@@ -36,10 +39,15 @@ const BottomTabBar = () => {
   };
 
   // Exiba o BottomTabBar apenas em rotas diferentes de "/login"
-  if (location.pathname === "/login") {
+  const shouldShowTabBar = !(
+    location.pathname.startsWith("/login") ||
+    location.pathname.startsWith("/admin")
+  );
+
+  if (!shouldShowTabBar) {
     return null;
   }
-
+  
   return (
     <div className="bottom-tab-bar">
       <NavLink to="/" className={getNavLinkClass("/")}>
@@ -90,6 +98,15 @@ const App = () => {
               <PrivateRoute>
                 <Home />
               </PrivateRoute>
+            }
+          />
+          <Route path="/admin" element={<ProtectedPage></ProtectedPage>} />
+          <Route
+            path="/admin/users"
+            element={
+              <ProtectAdmin>
+                <Users></Users>
+              </ProtectAdmin>
             }
           />
           <Route
