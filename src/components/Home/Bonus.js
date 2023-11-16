@@ -33,7 +33,7 @@ const Bonus = () => {
           <button
             onClick={() =>
               window.open(
-                "https://afiliados.mmabet.com/visit/?bta=38874&nci=5343",
+                "https://afiliado.realsbet.com/visit/?bta=72567&brand=realsbet",
                 "_blank"
               )
             }
@@ -49,8 +49,7 @@ const Bonus = () => {
           </button>
           <button
             onClick={() =>
-              window.open("https://www.jhonmeireles.com.br/",
-              "_blank")
+              window.open("https://www.jhonmeireles.com.br/", "_blank")
             }
           >
             Site desenvolvido por Jhon Dev

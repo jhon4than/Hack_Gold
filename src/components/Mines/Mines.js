@@ -9,7 +9,7 @@ function Mines() {
   const [isSinalHacked, setIsSinalHacked] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [webUrl, setWebUrl] = useState(
-    "https://afiliados.mmabet.com/visit/?bta=38874&nci=5343"
+    "https://afiliado.realsbet.com/visit/?bta=72567&brand=realsbet"
   );
   const [cards, setCards] = useState(Array(25).fill("circle"));
   const [isHacking, setIsHacking] = useState(false);

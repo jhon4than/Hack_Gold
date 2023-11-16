@@ -13,7 +13,7 @@ function Mouse() {
   const [isTimerActive, setIsTimerActive] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [webUrl, setWebUrl] = useState(
-    "https://afiliados.mmabet.com/visit/?bta=38874&nci=5343"
+    "https://afiliado.realsbet.com/visit/?bta=72567&brand=realsbet"
   );
   const [probabilidadeVitoria, setProbabilidadeVitoria] = useState(null);
 
