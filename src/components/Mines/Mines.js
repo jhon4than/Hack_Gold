@@ -30,12 +30,12 @@ function Mines() {
     try {
       const board = new Array(25).fill("circle");
       const totalItems = { mines: 0, stars: 0 };
-      while (totalItems.mines < 3 || totalItems.stars < 3) {
+      while (totalItems.mines < 3 || totalItems.stars < 5) {
         const position = Math.floor(Math.random() * 25);
         if (totalItems.mines < 3 && board[position] === "circle") {
           board[position] = "mine";
           totalItems.mines++;
-        } else if (totalItems.stars < 3 && board[position] === "circle") {
+        } else if (totalItems.stars < 5 && board[position] === "circle") {
           board[position] = "star";
           totalItems.stars++;
         }
