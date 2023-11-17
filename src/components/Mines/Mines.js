@@ -75,6 +75,19 @@ function Mines() {
     const cardClass = card === "star" ? "star" : "circle";
     const IconComponent = card === "star" ? FaStar : FaCircle;
 
+    // Verificação de compatibilidade para dispositivos móveis
+    if (
+      typeof window !== "undefined" &&
+      /Mobi|Android/i.test(window.navigator.userAgent)
+    ) {
+      // Renderização alternativa para dispositivos móveis
+      return (
+        <div key={index} className={`card ${cardClass}`}>
+          {card === "star" ? "⭐" : "⚪"} {/* Ícones alternativos */}
+        </div>
+      );
+    }
+
     return (
       <div key={index} className={`card ${cardClass}`}>
         <IconComponent
