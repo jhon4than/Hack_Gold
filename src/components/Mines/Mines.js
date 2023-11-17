@@ -138,7 +138,7 @@ function Mines() {
             "HACKEAR SINAL"
           )}
         </button>
-        {/* <iframe src={webUrl} title="Conteúdo Web" className="web-view" /> */}
+        <iframe src={webUrl} title="Conteúdo Web" className="web-view" />
       </div>
     </div>
   );
