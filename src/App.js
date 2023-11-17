@@ -9,7 +9,6 @@ import {
 import { FaHome, FaDice, FaGift, FaArrowLeft } from "react-icons/fa";
 import PrivateRoute from "./components/Home/PrivateRoute";
 import "./App.css";
-import FacebookPixel from "./FacebookPixel";
 
 // Importe seus componentes da Web aqui
 import Home from "./components/Home/Home";
@@ -86,7 +85,6 @@ const Header = () => {
 const App = () => {
   return (
     <>
-      <FacebookPixel />
       <Router>
         <Routes>
           {" "}
