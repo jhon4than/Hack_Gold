@@ -138,8 +138,7 @@ function Mines() {
             "HACKEAR SINAL"
           )}
         </button>
-        {/* Substitua WebView por iframe na web */}
-        <iframe src={webUrl} title="Conteúdo Web" className="web-view" />
+        {/* <iframe src={webUrl} title="Conteúdo Web" className="web-view" /> */}
       </div>
     </div>
   );
