@@ -23,7 +23,7 @@ const Bonus = () => {
           <button
             onClick={() =>
               window.open(
-                "https://api.whatsapp.com/send?phone=5569992732549&text=Estou%20precisando%20de%20suporte%20pode%20me%20ajudar",
+                "https://chat.whatsapp.com/E3cOQghtTQ70St511afvFn",
                 "_blank"
               )
             }
