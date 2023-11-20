@@ -1,13 +1,13 @@
 .bonus-page {
   width: 100%;
   min-height: 100vh;
-  background: url("../../assets/icone2.jpg") no-repeat center center fixed;
   background-size: cover;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px;
   box-sizing: border-box; /* Garante que padding não aumente a largura */
+  background-color: black;
 }
 
 

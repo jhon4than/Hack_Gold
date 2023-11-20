@@ -109,7 +109,6 @@ function Mines() {
   return (
     <div
       className="background"
-      style={{ backgroundImage: `url(${backgroundImg})` }}
     >
       <div className="container">
         <HeaderLogo />

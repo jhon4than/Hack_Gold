@@ -1,10 +1,9 @@
 /* Games.css */
 .games-background {
-  background-size: cover;
-  background-position: center;
-  padding-top: 10px;
   background-color: black;
+  min-height: 100vh; /* Isso garante que o fundo preto cubra pelo menos a altura total da tela */
 }
+
 
 .scroll-container {
   overflow-y: auto;

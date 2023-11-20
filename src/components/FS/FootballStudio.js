@@ -62,8 +62,6 @@ function FootballStudio() {
       const simulatedResults = generateRandomResultsBasedOnStrategies();
       setLastResults(simulatedResults.slice(0, 5));
       checkStrategy(simulatedResults);
-    } finally {
-      setIsLoading(false);
     }
   };
 
@@ -151,7 +149,7 @@ function FootballStudio() {
           className="logo"
         />
         {isLoading || directionColor ? (
-          <div className="football-loading">
+          <div className="results-container">
             {Array.isArray(loadingMessage) ? (
               loadingMessage.map((line, index) => (
                 <p key={index} className="loading-text">

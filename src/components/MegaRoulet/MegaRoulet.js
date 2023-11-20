@@ -15,20 +15,20 @@ function MegaRoulet() {
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
   const [timeoutId, setTimeoutId] = useState(null);
   const generateRandomSignal = () => {
-    const signals = ["A", "V", "E"]; // Azul, Vermelho ou Empate
+    const signals = ["P", "V", "G"]; // Azul, Vermelho ou Empate
     return signals[Math.floor(Math.random() * signals.length)];
   };
 
   const generateRandomResultsBasedOnStrategies = () => {
     const STRATEGIES = [
-      { PADRAO: ["V", "V"], ENTRADA: "A" },
-      { PADRAO: ["A", "A"], ENTRADA: "V" },
-      { PADRAO: ["V", "V", "V"], ENTRADA: "A" },
-      { PADRAO: ["A", "V", "A"], ENTRADA: "V" },
-      { PADRAO: ["V", "A", "V"], ENTRADA: "A" },
-      { PADRAO: ["A", "A", "A"], ENTRADA: "V" },
-      { PADRAO: ["A", "A", "A", "A"], ENTRADA: "V" },
-      { PADRAO: ["V", "V", "V", "V"], ENTRADA: "A" },
+      { PADRAO: ["V", "V"], ENTRADA: "P" },
+      { PADRAO: ["P", "P"], ENTRADA: "V" },
+      { PADRAO: ["V", "V", "V"], ENTRADA: "P" },
+      { PADRAO: ["P", "V", "P"], ENTRADA: "V" },
+      { PADRAO: ["V", "P", "V"], ENTRADA: "P" },
+      { PADRAO: ["P", "P", "P"], ENTRADA: "V" },
+      { PADRAO: ["P", "P", "P", "P"], ENTRADA: "V" },
+      { PADRAO: ["V", "V", "V", "V"], ENTRADA: "P" },
     ];
     // Pega um padrão aleatório das estratégias
     const randomPattern =
@@ -151,7 +151,7 @@ function MegaRoulet() {
           className="logo"
         />
         {isLoading || directionColor ? (
-          <div className="mega-roulet-loading">
+          <div className="results-container">
             {Array.isArray(loadingMessage) ? (
               loadingMessage.map((line, index) => (
                 <p key={index} className="loading-text">
@@ -170,7 +170,7 @@ function MegaRoulet() {
         ) : (
           <div className="results-container">
             <p className="results-header">
-              Nossa inteligência artificial está identificando falhas na
+              👨🏻‍💻 Nossa inteligência artificial está identificando falhas na
               plataforma.
             </p>
           </div>

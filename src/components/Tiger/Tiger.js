@@ -76,12 +76,7 @@ function Tiger() {
   };
 
   return (
-    <div
-      className="tiger-background"
-      style={{
-        backgroundImage: `url(${require("../../assets/imgfortune.jpg")})`,
-      }}
-    >
+    <div className="tiger-background">
       <div className="tiger-container">
         <HeaderLogo />
         <img
