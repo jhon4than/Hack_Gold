@@ -57,11 +57,8 @@ function Games() {
   ];
 
   return (
-    <div
-    className="games-background"
-    style={{ backgroundImage: `url(${backgroundImg})` }}
-    >
-    <HeaderLogo />
+    <div className="games-background">
+      <HeaderLogo />
       <div className="scroll-container">
         <div className="floating-text-box">
           <h2 className="floating-text">

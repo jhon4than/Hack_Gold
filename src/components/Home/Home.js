@@ -426,7 +426,7 @@ function Home() {
   return (
     <div
       className="background"
-      style={{ backgroundImage: `url(${fundo})` }} // Corrigido para usar a sintaxe correta
+      // style={{ backgroundImage: `url(${fundo})` }} // Corrigido para usar a sintaxe correta
     >
       <div className="scrollContainer">
         <div className="container">

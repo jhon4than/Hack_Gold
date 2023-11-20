@@ -8,7 +8,7 @@
   min-height: 100vh;
   background-size: cover;
   background-position: center center;
-  background-image: url('../../assets/MegaRoulette.jpg');
+  background-color: black;
 }
 
 .mega-roulet-container {
@@ -16,10 +16,8 @@
   margin: auto;
   text-align: center;
   padding: 20px;
-  background-color: rgba(143, 143, 143, 0.8); /* 80% opacidade */
   border-radius: 20px;
 }
-
 
 .logo {
   width: 150px;

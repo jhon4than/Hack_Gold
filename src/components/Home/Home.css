@@ -2,6 +2,7 @@
 .background {
   flex: 1;
   background-size: cover;
+  background-color: black;
 }
 
 .scrollContainer {
