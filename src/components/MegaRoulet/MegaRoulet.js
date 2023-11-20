@@ -46,7 +46,9 @@ function MegaRoulet() {
     setIsLoading(true);
     setLoadingMessage("Analisando a entrada ao vivo. Por favor, aguarde...");
     try {
-      const response = await axios.get("http://54.39.112.34:5000/api/mega-roulette");
+      const response = await axios.get(
+        "https://54.39.112.34:5000/api/mega-roulette"
+      );
       const data = response.data;
 
       if (data && data.results.length > 0) {
