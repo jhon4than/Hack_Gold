@@ -13,6 +13,7 @@ import rabbitimg from "../../imgs/fortunerabbit.jpeg";
 import dragontigerimg from "../../imgs/dragontiger.jpeg";
 import backgroundImg from "../../assets/img03.png";
 import HeaderLogo from "../Home/headerLogo";
+import rouletImg from "../../imgs/MegaRoulet.jpg";
 
 function Games() {
   const navigate = useNavigate();
@@ -34,6 +35,9 @@ function Games() {
       case "FortuneOx":
         navigate("/games/fortuneox");
         break;
+      case "MegaRoulet":
+        navigate("/games/megaroulet");
+        break;
       // Adicione outros jogos aqui conforme necessário...
       default:
         console.warn("No route found for:", gameName);
@@ -42,6 +46,7 @@ function Games() {
 
   const gamesList = [
     { name: "Football-studio", img: cardsImg, available: true },
+    { name: "MegaRoulet", img: rouletImg, available: true },
     { name: "Mines", img: minesImg, available: true },
     { name: "Tiger", img: fortuneImg, available: true },
     { name: "Mouse", img: mouseimg, available: true },

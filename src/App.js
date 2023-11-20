@@ -16,6 +16,7 @@ import Games from "./components/Home/Games";
 import MinesScreen from "./components/Mines/Mines";
 import TigerScreen from "./components/Tiger/Tiger";
 import FootballStudioScreen from "./components/FS/FootballStudio";
+import MegaRouletScreen from "./components/MegaRoulet/MegaRoulet";
 import BonusScreen from "./components/Home/Bonus";
 import MouseScreen from "./components/Mouse/Mouse";
 import FortuneOx from "./components/FortuneOx/FortuneOx";
@@ -160,6 +161,14 @@ const App = () => {
             element={
               <PrivateRoute>
                 <MouseScreen />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/games/megaroulet"
+            element={
+              <PrivateRoute>
+                <MegaRouletScreen />
               </PrivateRoute>
             }
           />

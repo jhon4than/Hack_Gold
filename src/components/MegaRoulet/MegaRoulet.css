@@ -1,0 +1,134 @@
+/* MegaRoulet.css */
+
+.mega-roulet-background {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center center;
+  background-image: url('../../assets/MegaRoulette.jpg');
+}
+
+.mega-roulet-container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(143, 143, 143, 0.8); /* 80% opacidade */
+  border-radius: 20px;
+}
+
+
+.logo {
+  width: 150px;
+  height: 150px;
+  align-self: center;
+  margin-top: 20px;
+  object-fit: contain;
+}
+
+.results-container {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.results-header {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.hack-button-container {
+  align-self: center;
+  margin-top: 20px;
+}
+
+.mega-roulet-hack-button {
+  background-color: #db3434;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.mega-roulet-disabled-button {
+  background-color: #3498db;
+}
+
+.mega-roulet-loading {
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.error-container {
+  background-color: rgba(255, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  align-self: center;
+}
+
+.loading-text, .error-text {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+.result-item {
+  font-size: 24px;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: block;
+  text-align: center;
+}
+
+.mega-roulet-webview {
+  width: 100%;
+  height: 700px;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+.spinner {
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-top: 3px solid #fff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  animation: spin 1s linear infinite;
+  vertical-align: middle; /* Alinha verticalmente com o texto */
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .mega-roulet-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mega-roulet-container {
+    width: 100%;
+  }
+}
