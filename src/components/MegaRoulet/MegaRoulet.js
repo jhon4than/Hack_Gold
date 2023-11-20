@@ -92,7 +92,7 @@ function MegaRoulet() {
         setLoadingMessage([
           "🎲 ENTRADA CONFIRMADA!",
           `🎰 Apostar no ${direction}`,
-          "🟢 Proteger no 0",
+          "🟢 Proteger no 0 com 10% Banca",
           "🔁 Fazer até 2 gales",
         ]);
         setDirectionColor(direction);
