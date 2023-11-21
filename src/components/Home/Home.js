@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css"; // Importar o CSS correspondente
 import LogoMain from "../../assets/logoHome-remo.png";
 import fundo from "../../assets/imageHome.jpg";
 import videoSrc from "../../assets/VideoCasaCompleto.mp4";
 import Carousel from "./Carousel";
+import apple from "../../assets/apple.png";
+import android from "../../assets/android.png";
+import downloadIcon from "../../assets/botao-de-download.png";
+import TutorialModal from "./TurotialModal";
 
 function Home() {
   const carouselItems = [
@@ -423,24 +427,78 @@ function Home() {
       game: "Mines",
     },
   ];
+  const [isTutorialOpen, setTutorialOpen] = useState(false);
+  const [platform, setPlatform] = useState(null);
+  const openTutorial = (platform) => {
+    setTutorialOpen(true);
+    setPlatform(platform);
+  };
+
+  const closeTutorial = () => {
+    setTutorialOpen(false);
+    setPlatform(null);
+  };
+
   return (
-    <div
-      className="background"
-      // style={{ backgroundImage: `url(${fundo})` }} // Corrigido para usar a sintaxe correta
-    >
+    <div className="background">
       <div className="scrollContainer">
         <div className="container">
+          {/* Carousel: Image slider that may contain various items like promotions or features */}
           <Carousel items={carouselItems} />
+
+          {/* Logo: Branding image at the top of the page */}
           <img src={LogoMain} className="centerImage" alt="Logo" />
 
+          {/* Download Section: Prompts users to download the app with respective store buttons */}
+          <div className="app-download-section">
+            <div className="install-prompt">
+              {/* Download Icon: Visual cue to download */}
+              <img
+                src={downloadIcon}
+                alt="Download"
+                className="download-icon"
+              />
+              {/* Prompt Text: Call to action for app installation */}
+              <span>Instale nosso app:</span>
+            </div>
+            {/* When the user clicks on the button, the tutorial modal opens */}
+            <div className="download-buttons">
+              <button
+                onClick={() => openTutorial("android")}
+                className="download-button google-play"
+              >
+                <img src={android} alt="Android" /> Android
+              </button>
+              <button
+                onClick={() => openTutorial("ios")}
+                className="download-button app-store"
+              >
+                <img src={apple} alt="IOS" /> IOS
+              </button>
+            </div>
+          </div>
+
+          {/* Welcome Section: Greets the user and introduces the app */}
           <div className="textContainer">
+            {/* Main Greeting */}
             <h1 className="welcomeText">Bem Vindo ao Hacker Gold</h1>
+            {/* Description: Additional information about the app */}
             <p className="descriptionText">
               O seu melhor aplicativo de sinais da atualidade!
             </p>
+            {/* Video Prompt: Directs users to watch the tutorial video */}
             <p className="videoPrompt">▼ Assista o vídeo tutorial abaixo ▼</p>
           </div>
+
+          {/* Tutorial Video: Provides a visual guide or tutorial for using the app */}
           <video src={videoSrc} className="video" controls />
+
+          {/* Tutorial Modal */}
+          <TutorialModal
+            isOpen={isTutorialOpen}
+            onClose={closeTutorial}
+            platform={platform}
+          />
         </div>
       </div>
     </div>

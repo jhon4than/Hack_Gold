@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import { FaHome, FaDice, FaGift, FaArrowLeft } from "react-icons/fa";
 import PrivateRoute from "./components/Home/PrivateRoute";
+import ScrollToTop from "./ScrollToTop";
 import "./App.css";
 
 // Importe seus componentes da Web aqui
@@ -47,7 +48,7 @@ const BottomTabBar = () => {
   if (!shouldShowTabBar) {
     return null;
   }
-  
+
   return (
     <div className="bottom-tab-bar">
       <NavLink to="/" className={getNavLinkClass("/")}>
@@ -87,6 +88,7 @@ const App = () => {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <Routes>
           {" "}
           {/* Use Routes aqui */}
