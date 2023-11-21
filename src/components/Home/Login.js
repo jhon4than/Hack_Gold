@@ -191,7 +191,7 @@ function Login() {
             onChange={(e) => setWhatsapp(e.target.value)}
           />
           <button
-            className="login-button"
+            className={`login-button ${isLoggingIn ? "loading" : ""}`}
             onClick={handleLogin}
             disabled={isLoggingIn}
           >

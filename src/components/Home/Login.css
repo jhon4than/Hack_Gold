@@ -30,7 +30,6 @@
   z-index: 2;
   padding: 2rem;
   border-radius: 15px;
-  background-color: rgba(0, 0, 0, 0.75); /* Fundo escuro com transparência */
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5); /* Sombra suave para profundidade */
   max-width: 450px; /* Largura máxima do container */
   width: 100%; /* Largura baseada no viewport */
