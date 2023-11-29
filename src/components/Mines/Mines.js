@@ -12,7 +12,7 @@ function Mines() {
   const [isSinalHacked, setIsSinalHacked] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [webUrl, setWebUrl] = useState(
-    "https://afiliado.realsbet.com/visit/?bta=72567&brand=realsbet"
+    "https://afiliado.realsbet.com/visit/?bta=74734&brand=realsbet"
   );
   const [cards, setCards] = useState(Array(25).fill("circle"));
   const [isHacking, setIsHacking] = useState(false);
@@ -107,9 +107,7 @@ function Mines() {
   }
 
   return (
-    <div
-      className="background"
-    >
+    <div className="background">
       <div className="container">
         <HeaderLogo />
         <img src={logoImg} alt="Logo" className="mines-logo" />

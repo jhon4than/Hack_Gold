@@ -33,7 +33,7 @@ const Bonus = () => {
           <button
             onClick={() =>
               window.open(
-                "https://afiliado.realsbet.com/visit/?bta=72567&brand=realsbet",
+                "https://afiliado.realsbet.com/visit/?bta=74734&brand=realsbet",
                 "_blank"
               )
             }

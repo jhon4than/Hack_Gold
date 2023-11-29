@@ -10,7 +10,7 @@ function Tiger() {
   const [isTimerActive, setIsTimerActive] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [webUrl, setWebUrl] = useState(
-    "https://afiliado.realsbet.com/visit/?bta=72567&brand=realsbet"
+    "https://afiliado.realsbet.com/visit/?bta=74734&brand=realsbet"
   );
 
   useEffect(() => {

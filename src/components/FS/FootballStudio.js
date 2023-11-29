@@ -8,7 +8,7 @@ function FootballStudio() {
   const [isLoading, setIsLoading] = useState(false);
   const [lastResults, setLastResults] = useState([]);
   const [webUrl, setWebUrl] = useState(
-    "https://afiliado.realsbet.com/visit/?bta=72567&brand=realsbet"
+    "https://afiliado.realsbet.com/visit/?bta=74734&brand=realsbet"
   );
   const [loadingMessage, setLoadingMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
