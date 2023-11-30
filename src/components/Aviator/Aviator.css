@@ -1,6 +1,6 @@
-/* FortuneOx.css */
+/* Aviator.css */
 
-.fortune-ox-background {
+.aviator-background {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@
   background-size: cover;
 }
 
-.fortune-ox-container {
+.aviator-container {
   width: 90%;
   max-width: 600px;
   margin: auto;
@@ -21,13 +21,14 @@
   color: white; /* Texto branco para melhor legibilidade */
 }
 
-.fortune-ox-logo {
+.aviator-logo {
   width: 200px;
   height: auto;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-.fortune-ox-float-box {
+.aviator-float-box {
   background-color: rgba(255, 255, 255, 0.1); /* Caixa mais transparente para fundo preto */
   padding: 20px;
   border-radius: 15px;
@@ -35,8 +36,8 @@
   border: 1px solid #fff; /* Borda branca para definição */
 }
 
-.fortune-ox-entrada-text,
-.fortune-ox-info-text {
+.aviator-entrada-text,
+.aviator-info-text {
   font-size: 18px;
   font-weight: bold;
   color: white; /* Cor do texto para branco */
@@ -45,22 +46,22 @@
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Sombra de texto para destaque */
 }
 
-.fortune-ox-button {
+.aviator-button {
   padding: 0;
   border: none;
   background: none;
   cursor: pointer;
 }
 
-.fortune-ox-spin-button {
+.aviator-spin-button {
   animation: spin 2s linear infinite;
 }
 
-.fortune-ox-button-image {
+.aviator-button-image {
   display: block;
 }
 
-.fortune-ox-button-spin {
+.aviator-button-spin {
   animation: spin 5s linear infinite;
 }
 
@@ -104,7 +105,7 @@
 }
 
 .probabilidade-media {
-  color: gold; /* Cor dourada para probabilidade média */
+  color: #39FF14; /* Cor dourada para probabilidade média */
 }
 
 .probabilidade-baixa {
@@ -117,12 +118,12 @@
   margin-top: 10px;
 }
 
-.fortune-ox-loading {
+.aviator-loading {
   color: white; /* Cor do texto para branco */
   font-weight: bold;
 }
 
-.fortune-ox-webview {
+.aviator-webview {
   width: 85%;
   height: 700px;
   border: none;
@@ -133,19 +134,80 @@
   margin-left: -30px;
 }
 
+
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15vh; /* Use a altura total da tela para centralização vertical */
+}
+
+.aviator-button {
+  display: flex;
+  align-items: center; /* Isso garantirá que o ícone e o texto estejam alinhados verticalmente */
+  justify-content: center; /* Isso centrará o conteúdo horizontalmente */
+  padding: 15px 30px;
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  position: relative;
+  overflow: hidden;
+  transition: color 0.3s, box-shadow 0.3s, transform 0.3s;
+  animation: colorShift 5s ease-in-out infinite, float 3s ease-in-out infinite;
+  align-self: center;
+}
+
+@keyframes colorShift {
+  0%, 100% {
+    background-color: red;
+  }
+  50% {
+    background-color: darkred;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.button-icon {
+  width: 24px; /* Ou o tamanho que você desejar para o ícone */
+  height: auto;
+  margin-right: 8px; /* Adicione espaço entre o ícone e o texto */
+}
+/* No seu arquivo Aviator.css */
+.aviator-button.hack-success {
+  background-color: #00C851; /* Um tom de verde */
+  /* Adicione mais estilos se necessário */
+}
+
+
+
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
 @media (max-width: 768px) {
-  .fortune-ox-container {
+  .aviator-container {
     width: 95%;
   }
 }
 
 @media (max-width: 480px) {
-  .fortune-ox-container {
+  .aviator-container {
     width: 100%;
     padding: 15px;
   }

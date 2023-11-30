@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./Aviator.css"; // Certifique-se de ter um arquivo CSS correspondente
+import "./Spaceman.css"; // Certifique-se de ter um arquivo CSS correspondente
 import HeaderLogo from "../Home/headerLogo";
 // Importe o componente de barra de progresso circular se estiver usando um de terceiros
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-function Aviator() {
+function Spaceman() {
   const [maxJogadas, setMaxJogadas] = useState(0);
   const [contador, setContador] = useState("03:00");
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
@@ -105,34 +105,36 @@ function Aviator() {
   };
 
   return (
-    <div className="aviator-background">
-      <div className="aviator-container">
+    <div className="spaceman-background">
+      <div className="spaceman-container">
         <HeaderLogo />
         <img
-          src={require("../../assets/logoaviator.png")} // Certifique-se de ter uma imagem correspondente
-          alt="Aviator"
-          className="aviator-logo"
+          src={require("../../assets/SPACEMANLUCRATIVO.webp")} // Certifique-se de ter uma imagem correspondente
+          alt="spaceman"
+          className="spaceman-logo"
         />
-        <div className="aviator-float-box">
-          <p className="aviator-entrada-text">{entradaStatus}</p>
+        <div className="spaceman-float-box">
+          <p className="spaceman-entrada-text">{entradaStatus}</p>
           {isLoading ? (
-            <p className="aviator-info-text">
+            <p className="spaceman-info-text">
               🔄 Processando... Por favor, aguarde.
             </p>
           ) : (
             <>
               {!isTimerActive && (
-                <p className="aviator-info-text">
+                <p className="spaceman-info-text">
                   🔍 Em busca de falhas... Fique atento! 🛫
                 </p>
               )}
-              <p className="aviator-info-text">
+              <p className="spaceman-info-text">
                 ⌛ Jogue até acabar o tempo: {contador}
               </p>
               <div
-                className={`aviator-info-text ${isTimerActive ? "hidden" : ""}`}
+                className={`spaceman-info-text ${
+                  isTimerActive ? "hidden" : ""
+                }`}
               >
-                <p className="aviator-info-text">
+                <p className="spaceman-info-text">
                   👇 Clique no Botão para Hackear o Sinal
                 </p>
                 <div className="button-wrapper">
@@ -189,10 +191,14 @@ function Aviator() {
             </>
           )}
         </div>
-        <iframe src={webUrl} title="Conteúdo Web" className="aviator-webview" />
+        <iframe
+          src={webUrl}
+          title="Conteúdo Web"
+          className="spaceman-webview"
+        />
       </div>
     </div>
   );
 }
 
-export default Aviator;
+export default Spaceman;

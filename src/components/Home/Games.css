@@ -150,12 +150,12 @@
 
 .game-img {
   width: 100%;
-  height: auto; /* Isso manterá a proporção da imagem */
+  object-fit: cover; /* This will ensure the image covers the area without being stretched */
   flex-grow: 1;
-  object-fit: cover;
   border-radius: 1px;
   margin-bottom: 5px;
 }
+
 
 .coming-soon-overlay {
   position: absolute;
@@ -192,16 +192,24 @@
 
 .enter-game-button::before {
   content: '//';
-  margin-right: 8px;
+  max-width: 100%; /* Ensures the button does not exceed the width of its parent */
+  box-sizing: border-box; /* Includes padding and border in the element's width and height */
+  overflow: hidden; /* Prevents children from overflowing */
   background-color: #c0392b; 
 }
 
 .enter-game-button::after {
   content: '→';
   margin-left: 8px;
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden; /* Hides the overflowed content */
+  text-overflow: ellipsis; 
 }
 .enter-game-button:hover {
   background-color: #e74c3c; /* Escurecer botão ao passar o mouse */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  overflow: hidden; /* Hides the overflowed content */
+  text-overflow: ellipsis; 
 }
 
 /* Ajusta o padding para dar espaço entre o botão e a parte inferior do card */
@@ -217,4 +225,20 @@
 /* Espaçamento na parte inferior do último card para não colar no menu */
 .game-card:last-child {
   margin-bottom: 20px;
+}
+
+/* Responsive grid for mobile devices */
+@media (max-width: 768px) {
+  .games-grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust the min-width for smaller screens */
+  }
+
+  .game-card {
+    min-height: auto; /* Allows the card to grow with the content, avoiding fixed height cropping */
+  }
+  .enter-game-button {
+    padding: 5px 15px; /* Smaller padding on smaller screens */
+    font-size: 14px; /* Smaller font size on smaller screens */
+    /* ... other responsive adjustments ... */
+  }
 }

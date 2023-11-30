@@ -21,6 +21,9 @@ import MegaRouletScreen from "./components/MegaRoulet/MegaRoulet";
 import BonusScreen from "./components/Home/Bonus";
 import MouseScreen from "./components/Mouse/Mouse";
 import FortuneOx from "./components/FortuneOx/FortuneOx";
+import Rabbit from "./components/Rabbit/Rabbit";
+import Aviator from "./components/Aviator/Aviator";
+import Spaceman from "./components/Spaceman/Spaceman";
 import Login from "./components/Home/Login";
 import ProtectedPage from "./components/Admin/ProtectedPage";
 import Users from "./components/Admin/Users";
@@ -171,6 +174,30 @@ const App = () => {
             element={
               <PrivateRoute>
                 <MegaRouletScreen />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/games/rabbit"
+            element={
+              <PrivateRoute>
+                <Rabbit />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/games/aviator"
+            element={
+              <PrivateRoute>
+                <Aviator />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/games/spaceman"
+            element={
+              <PrivateRoute>
+                <Spaceman />
               </PrivateRoute>
             }
           />

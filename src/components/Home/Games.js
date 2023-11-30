@@ -14,6 +14,7 @@ import dragontigerimg from "../../imgs/dragontiger.jpeg";
 import backgroundImg from "../../assets/img03.png";
 import HeaderLogo from "../Home/headerLogo";
 import rouletImg from "../../imgs/MegaRoulet.jpg";
+import spacemanImg from "../../imgs/spaceman.png";
 
 import { FaDice, FaChess, FaBurn } from "react-icons/fa";
 import { CgGames } from "react-icons/cg";
@@ -38,9 +39,9 @@ function Games() {
     Tiger: 92.08,
     Mouse: 98.23,
     FortuneOx: 93.51,
-    Rabbit: 0,
-    DragonTiger: 0,
-    Aviator: 0,
+    Rabbit: 98.52,
+    Spaceman: 96.12,
+    Aviator: 95.98,
   });
 
   const updatePayouts = () => {
@@ -101,6 +102,15 @@ function Games() {
       case "MegaRoulet":
         navigate("/games/megaroulet");
         break;
+      case "Rabbit":
+        navigate("/games/rabbit");
+        break;
+      case "Aviator":
+        navigate("/games/aviator");
+        break;
+      case "Spaceman":
+        navigate("/games/spaceman");
+        break;
       // Adicione outros jogos aqui conforme necessário...
       default:
         console.warn("No route found for:", gameName);
@@ -154,22 +164,22 @@ function Games() {
       name: "Rabbit",
       img: rabbitimg,
       category: "Slots",
-      payout: "0%",
-      available: false,
-    },
-    {
-      name: "DragonTiger",
-      img: dragontigerimg,
-      category: "Slots",
-      payout: "0%",
-      available: false,
+      payout: "92.50%",
+      available: true,
     },
     {
       name: "Aviator",
       img: aviatorImg,
-      category: "Crash",
-      payout: "0%",
-      available: false,
+      category: "Slots",
+      payout: "98.20%",
+      available: true,
+    },
+    {
+      name: "Spaceman",
+      img: spacemanImg,
+      category: "Slots",
+      payout: "99.40%",
+      available: true,
     },
     // { name: "Football-studio", img: cardsImg, available: true },
     // { name: "MegaRoulet", img: rouletImg, available: true },
@@ -230,7 +240,7 @@ function Games() {
                     className="enter-game-button"
                     onClick={() => handleClick(game.name)}
                   >
-                    ENTRAR_
+                  ENTRAR_
                   </button>
                 ) : (
                   <div className="coming-soon-overlay">

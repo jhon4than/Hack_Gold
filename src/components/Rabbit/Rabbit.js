@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import "./Aviator.css"; // Certifique-se de ter um arquivo CSS correspondente
+import "./Rabbit.css";
 import HeaderLogo from "../Home/headerLogo";
 // Importe o componente de barra de progresso circular se estiver usando um de terceiros
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 
-function Aviator() {
+function Rabbit() {
   const [maxJogadas, setMaxJogadas] = useState(0);
   const [contador, setContador] = useState("03:00");
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
@@ -16,7 +16,6 @@ function Aviator() {
     "https://afiliado.realsbet.com/visit/?bta=74734&brand=realsbet"
   );
   const [probabilidadeVitoria, setProbabilidadeVitoria] = useState(null);
-  const [hackSuccess, setHackSuccess] = useState(false);
 
   useEffect(() => {
     let intervalId;
@@ -61,21 +60,21 @@ function Aviator() {
 
   const handleHackearSinal = () => {
     setIsLoading(true);
+
     setTimeout(() => {
-      // Gera um número aleatório entre 1.00 e 5.00
-      const giros1 = Math.random() * (5.0 - 1.0) + 1.0;
-      // Arredonda para duas casas decimais
-      const girosArredondado = giros1.toFixed(2);
+      const giros1 = Math.floor(Math.random() * (20 - 10 + 1) + 10);
+      const giros2 = getRandomNumber();
 
       const statusMessage = `✨ Sinal Detectado!
 
-      ▶️ Começar após (1.30)X
-      ⚠️ Proteja em (2.0)X (Opcional)
+      ▶️ Pronto para Começar
 
-      🏃🏻‍♀️ Saia em (${girosArredondado})X
-      🌪️ Liberado até 2 martin gales
+      ⚙️ Modo de Jogo:
+      👆 ${giros1} Rodadas Manuais
+      🔄 ${giros2} Rodadas Automáticas
       `;
 
+      setMaxJogadas(giros1 + giros2);
       setEntradaStatus(statusMessage.trim());
       setIsTimerActive(true);
       setIsLoading(false);
@@ -105,54 +104,54 @@ function Aviator() {
   };
 
   return (
-    <div className="aviator-background">
-      <div className="aviator-container">
+    <div className="rabbit-background">
+      <div className="rabbit-container">
         <HeaderLogo />
         <img
-          src={require("../../assets/logoaviator.png")} // Certifique-se de ter uma imagem correspondente
-          alt="Aviator"
-          className="aviator-logo"
+          src={require("../../assets/rabitlogo.png")} // Certifique-se de ter uma imagem correspondente
+          alt="FortuneOx"
+          className="rabbit-logo"
         />
-        <div className="aviator-float-box">
-          <p className="aviator-entrada-text">{entradaStatus}</p>
+        <div className="rabbit-float-box">
+          <p className="rabbit-entrada-text">{entradaStatus}</p>
           {isLoading ? (
-            <p className="aviator-info-text">
+            <p className="rabbit-info-text">
               🔄 Processando... Por favor, aguarde.
             </p>
           ) : (
             <>
               {!isTimerActive && (
-                <p className="aviator-info-text">
-                  🔍 Em busca de falhas... Fique atento! 🛫
+                <p className="rabbit-info-text">
+                  🔍 Em busca de falhas... Fique atento!
                 </p>
               )}
-              <p className="aviator-info-text">
-                ⌛ Jogue até acabar o tempo: {contador}
+              <p className="rabbit-info-text">
+                ⌛ Contagem regressiva: {contador}
               </p>
-              <div
-                className={`aviator-info-text ${isTimerActive ? "hidden" : ""}`}
-              >
-                <p className="aviator-info-text">
-                  👇 Clique no Botão para Hackear o Sinal
-                </p>
-                <div className="button-wrapper">
-                  <button
-                    className={`aviator-button ${
-                      hackSuccess ? "hack-success" : ""
-                    }`}
-                    onClick={handleHackearSinal}
-                    disabled={isButtonDisabled}
-                  >
-                    <img
-                      src={require("../../assets/Icon_hacker.png")}
-                      alt="Icon"
-                      className="button-icon"
-                    />
-                    Hackear Sinal
-                  </button>
-                </div>
+              <p className="rabbit-info-text">
+                👇 Clique no Botão para Hackear o Sinal
+              </p>
+              <div className="button-wrapper">
+                <button
+                  className={`aviator-button`}
+                  onClick={handleHackearSinal}
+                  disabled={isButtonDisabled}
+                >
+                  <img
+                    src={require("../../assets/Icon_hacker.png")}
+                    alt="Icon"
+                    className="button-icon"
+                  />
+                  Hackear Sinal
+                </button>
               </div>
-
+              <p
+                className={`rabbit-max-jogadas-text ${
+                  isTimerActive ? "" : "hidden"
+                }`}
+              >
+                🎰 Jogadas máximas: {maxJogadas}
+              </p>
               <div
                 className={`progress-container ${
                   isTimerActive ? "" : "hidden"
@@ -189,10 +188,10 @@ function Aviator() {
             </>
           )}
         </div>
-        <iframe src={webUrl} title="Conteúdo Web" className="aviator-webview" />
+        <iframe src={webUrl} title="Conteúdo Web" className="rabbit-webview" />
       </div>
     </div>
   );
 }
 
-export default Aviator;
+export default Rabbit;

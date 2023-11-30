@@ -1,42 +1,43 @@
-/* Mouse.css */
+/* FortuneOx.css */
 
-.mouse-background {
+.rabbit-background {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: black;
+  background-color: black; /* Fundo preto para melhor contraste */
   background-size: cover;
 }
 
-.mouse-container {
+.rabbit-container {
   width: 90%;
   max-width: 600px;
   margin: auto;
   text-align: center;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo mais opaco para melhor contraste */
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  color: white; /* Texto branco para melhor visibilidade */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para efeito de elevação */
+  color: white; /* Texto branco para melhor legibilidade */
 }
 
-.mouse-logo {
+.rabbit-logo {
   width: 200px;
   height: auto;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
-.mouse-float-box {
-  background-color: rgba(255, 255, 255, 0.1); /* Fundo mais transparente */
+.rabbit-float-box {
+  background-color: rgba(255, 255, 255, 0.1); /* Caixa mais transparente para fundo preto */
   padding: 20px;
   border-radius: 15px;
   margin-bottom: 20px;
   border: 1px solid #fff; /* Borda branca para definição */
 }
 
-.mouse-entrada-text,
-.mouse-info-text {
+.rabbit-entrada-text,
+.rabbit-info-text {
   font-size: 18px;
   font-weight: bold;
   color: white; /* Cor do texto para branco */
@@ -45,22 +46,22 @@
   text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5); /* Sombra de texto para destaque */
 }
 
-.mouse-button {
+.rabbit-button {
   padding: 0;
   border: none;
   background: none;
   cursor: pointer;
 }
 
-.mouse-spin-button {
+.rabbit-spin-button {
   animation: spin 2s linear infinite;
 }
 
-.mouse-button-image {
+.rabbit-button-image {
   display: block;
 }
 
-.mouse-button-spin {
+.rabbit-button-spin {
   animation: spin 5s linear infinite;
 }
 
@@ -84,6 +85,7 @@
 
 .alerta-probabilidade-baixa {
   color: red; /* Mantém a cor vermelha para alertas */
+  font-size: 16px;
 }
 
 .hidden {
@@ -103,7 +105,7 @@
 }
 
 .probabilidade-media {
-  color: gold; /* Cor dourada para probabilidade média */
+  color: #39FF14; /* Cor dourada para probabilidade média */
 }
 
 .probabilidade-baixa {
@@ -116,12 +118,12 @@
   margin-top: 10px;
 }
 
-.mouse-loading {
+.rabbit-loading {
   color: white; /* Cor do texto para branco */
   font-weight: bold;
 }
 
-.mouse-webview {
+.rabbit-webview {
   width: 85%;
   height: 700px;
   border: none;
@@ -132,14 +134,19 @@
   margin-left: -30px;
 }
 
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 @media (max-width: 768px) {
-  .mouse-container {
+  .rabbit-container {
     width: 95%;
   }
 }
 
 @media (max-width: 480px) {
-  .mouse-container {
+  .rabbit-container {
     width: 100%;
     padding: 15px;
   }
