@@ -8,7 +8,7 @@ function FootballStudio() {
   const [isLoading, setIsLoading] = useState(false);
   const [lastResults, setLastResults] = useState([]);
   const [webUrl, setWebUrl] = useState(
-    "https://afiliado.realsbet.com/visit/?bta=74734&brand=realsbet"
+    "https://www.betfive.io/register?id=657bac5398c6f000299a6d6c"
   );
   const [loadingMessage, setLoadingMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");

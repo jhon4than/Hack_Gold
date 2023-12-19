@@ -33,7 +33,7 @@ const Bonus = () => {
           <button
             onClick={() =>
               window.open(
-                "https://afiliado.realsbet.com/visit/?bta=74734&brand=realsbet",
+                "https://www.betfive.io/register?id=657bac5398c6f000299a6d6c",
                 "_blank"
               )
             }
