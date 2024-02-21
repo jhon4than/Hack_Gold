@@ -12,7 +12,7 @@ function Mines() {
   const [isSinalHacked, setIsSinalHacked] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [webUrl, setWebUrl] = useState(
-    "https://www.betfive.io/register?id=657bac5398c6f000299a6d6c"
+    "https://afiliado.realsbet.com/visit/?bta=72567&brand=realsbet"
   );
   const [cards, setCards] = useState(Array(25).fill("circle"));
   const [isHacking, setIsHacking] = useState(false);

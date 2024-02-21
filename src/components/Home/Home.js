@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./Home.css"; // Importar o CSS correspondente
 import LogoMain from "../../assets/logoHome-remo.png";
 import fundo from "../../assets/imageHome.jpg";
-import videoSrc from "../../assets/VideoCasaCompleto.mp4";
 import Carousel from "./Carousel";
 import apple from "../../assets/apple.png";
 import android from "../../assets/android.png";
@@ -491,7 +490,7 @@ function Home() {
           </div>
 
           {/* Tutorial Video: Provides a visual guide or tutorial for using the app */}
-          <video src={videoSrc} className="video" controls />
+          {/* <video src={} className="video" controls /> */}
 
           {/* Tutorial Modal */}
           <TutorialModal
