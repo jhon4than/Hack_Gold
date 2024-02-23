@@ -9,9 +9,7 @@ function Tiger() {
   const [entradaStatus, setEntradaStatus] = useState("🔐 POSSÍVEL FALHA 🔐");
   const [isTimerActive, setIsTimerActive] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [webUrl, setWebUrl] = useState(
-    "https://afiliado.realsbet.com/visit/?bta=72567&brand=realsbet"
-  );
+  const [webUrl, setWebUrl] = useState("https://meucash.club/?r=kfthbjbx");
 
   useEffect(() => {
     let intervalId;

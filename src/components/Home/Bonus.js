@@ -32,10 +32,7 @@ const Bonus = () => {
           </button>
           <button
             onClick={() =>
-              window.open(
-                "https://afiliado.realsbet.com/visit/?bta=72567&brand=realsbet",
-                "_blank"
-              )
+              window.open("https://meucash.club/?r=kfthbjbx", "_blank")
             }
           >
             <FaRegListAlt /> Cadastre-se na Plataforma
