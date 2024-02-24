@@ -7,7 +7,9 @@ function MegaRoulet() {
   const [directionColor, setDirectionColor] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [lastResults, setLastResults] = useState([]);
-  const [webUrl, setWebUrl] = useState("https://meucash.club/?r=kfthbjbx");
+  const [webUrl, setWebUrl] = useState(
+    "https://www.betfive.io/register?id=657bac5398c6f000299a6d6c"
+  );
   const [loadingMessage, setLoadingMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);

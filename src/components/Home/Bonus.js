@@ -32,7 +32,10 @@ const Bonus = () => {
           </button>
           <button
             onClick={() =>
-              window.open("https://meucash.club/?r=kfthbjbx", "_blank")
+              window.open(
+                "https://www.betfive.io/register?id=657bac5398c6f000299a6d6c",
+                "_blank"
+              )
             }
           >
             <FaRegListAlt /> Cadastre-se na Plataforma

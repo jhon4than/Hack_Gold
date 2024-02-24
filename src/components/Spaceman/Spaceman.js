@@ -12,7 +12,9 @@ function Spaceman() {
   const [entradaStatus, setEntradaStatus] = useState("🔐 POSSÍVEL FALHA 🔐");
   const [isTimerActive, setIsTimerActive] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [webUrl, setWebUrl] = useState("https://meucash.club/?r=kfthbjbx");
+  const [webUrl, setWebUrl] = useState(
+    "https://www.betfive.io/register?id=657bac5398c6f000299a6d6c"
+  );
   const [probabilidadeVitoria, setProbabilidadeVitoria] = useState(null);
   const [hackSuccess, setHackSuccess] = useState(false);
 

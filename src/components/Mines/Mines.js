@@ -11,7 +11,9 @@ function Mines() {
   const [countdown, setCountdown] = useState("00:00");
   const [isSinalHacked, setIsSinalHacked] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [webUrl, setWebUrl] = useState("https://meucash.club/?r=kfthbjbx");
+  const [webUrl, setWebUrl] = useState(
+    "https://www.betfive.io/register?id=657bac5398c6f000299a6d6c"
+  );
   const [cards, setCards] = useState(Array(25).fill("circle"));
   const [isHacking, setIsHacking] = useState(false);
   const [intervalId, setIntervalId] = useState(null);
