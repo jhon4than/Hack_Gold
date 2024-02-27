@@ -10,7 +10,7 @@ function Tiger() {
   const [isTimerActive, setIsTimerActive] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [webUrl, setWebUrl] = useState(
-    "https://www.betfive.io/register?id=657bac5398c6f000299a6d6c"
+    "https://hudsbet.cxclick.com/visit/?bta=35160&brand=hudsbet"
   );
 
   useEffect(() => {
