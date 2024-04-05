@@ -32,10 +32,7 @@ const Bonus = () => {
           </button>
           <button
             onClick={() =>
-              window.open(
-                "https://hudsbet.cxclick.com/visit/?bta=35160&brand=hudsbet",
-                "_blank"
-              )
+              window.open("https://k8v3.waway.io/4277-1894991", "_blank")
             }
           >
             <FaRegListAlt /> Cadastre-se na Plataforma

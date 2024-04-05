@@ -9,9 +9,7 @@ function Tiger() {
   const [entradaStatus, setEntradaStatus] = useState("🔐 POSSÍVEL FALHA 🔐");
   const [isTimerActive, setIsTimerActive] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [webUrl, setWebUrl] = useState(
-    "https://hudsbet.cxclick.com/visit/?bta=35160&brand=hudsbet"
-  );
+  const [webUrl, setWebUrl] = useState("https://k8v3.waway.io/4277-1894991");
 
   useEffect(() => {
     let intervalId;

@@ -7,9 +7,7 @@ function FootballStudio() {
   const [directionColor, setDirectionColor] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [lastResults, setLastResults] = useState([]);
-  const [webUrl, setWebUrl] = useState(
-    "https://hudsbet.cxclick.com/visit/?bta=35160&brand=hudsbet"
-  );
+  const [webUrl, setWebUrl] = useState("https://k8v3.waway.io/4277-1894991");
   const [loadingMessage, setLoadingMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
