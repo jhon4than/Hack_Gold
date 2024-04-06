@@ -32,7 +32,7 @@ const Bonus = () => {
           </button>
           <button
             onClick={() =>
-              window.open("https://k8v3.waway.io/4277-1894991", "_blank")
+              window.open("https://go.aff.arvore.club/n71wfk85", "_blank")
             }
           >
             <FaRegListAlt /> Cadastre-se na Plataforma

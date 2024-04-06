@@ -12,7 +12,7 @@ function Rabbit() {
   const [entradaStatus, setEntradaStatus] = useState("🔐 POSSÍVEL FALHA 🔐");
   const [isTimerActive, setIsTimerActive] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [webUrl, setWebUrl] = useState("https://k8v3.waway.io/4277-1894991");
+  const [webUrl, setWebUrl] = useState("https://go.aff.arvore.club/n71wfk85");
   const [probabilidadeVitoria, setProbabilidadeVitoria] = useState(null);
 
   useEffect(() => {

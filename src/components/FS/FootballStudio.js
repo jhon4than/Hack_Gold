@@ -7,7 +7,7 @@ function FootballStudio() {
   const [directionColor, setDirectionColor] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [lastResults, setLastResults] = useState([]);
-  const [webUrl, setWebUrl] = useState("https://k8v3.waway.io/4277-1894991");
+  const [webUrl, setWebUrl] = useState("https://go.aff.arvore.club/n71wfk85");
   const [loadingMessage, setLoadingMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
