@@ -12,7 +12,9 @@ function Spaceman() {
   const [entradaStatus, setEntradaStatus] = useState("🔐 POSSÍVEL FALHA 🔐");
   const [isTimerActive, setIsTimerActive] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const [webUrl, setWebUrl] = useState("https://go.aff.arvore.club/n71wfk85");
+  const [webUrl, setWebUrl] = useState(
+    "https://go.aff.bullsbetaffiliate.com/rrhgu2ry"
+  );
   const [probabilidadeVitoria, setProbabilidadeVitoria] = useState(null);
   const [hackSuccess, setHackSuccess] = useState(false);
 

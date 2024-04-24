@@ -32,7 +32,10 @@ const Bonus = () => {
           </button>
           <button
             onClick={() =>
-              window.open("https://go.aff.arvore.club/n71wfk85", "_blank")
+              window.open(
+                "https://go.aff.bullsbetaffiliate.com/rrhgu2ry",
+                "_blank"
+              )
             }
           >
             <FaRegListAlt /> Cadastre-se na Plataforma
