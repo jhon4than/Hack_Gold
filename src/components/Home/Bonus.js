@@ -32,10 +32,7 @@ const Bonus = () => {
           </button>
           <button
             onClick={() =>
-              window.open(
-                "https://go.aff.bullsbetaffiliate.com/rrhgu2ry",
-                "_blank"
-              )
+              window.open("https://zika.bet/register?code=7HIRQAPPZX", "_blank")
             }
           >
             <FaRegListAlt /> Cadastre-se na Plataforma

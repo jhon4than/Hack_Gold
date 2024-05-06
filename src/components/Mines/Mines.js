@@ -12,7 +12,7 @@ function Mines() {
   const [isSinalHacked, setIsSinalHacked] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [webUrl, setWebUrl] = useState(
-    "https://go.aff.bullsbetaffiliate.com/rrhgu2ry"
+    "https://zika.bet/register?code=7HIRQAPPZX"
   );
   const [cards, setCards] = useState(Array(25).fill("circle"));
   const [isHacking, setIsHacking] = useState(false);

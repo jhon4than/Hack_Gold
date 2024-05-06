@@ -8,7 +8,7 @@ function FootballStudio() {
   const [isLoading, setIsLoading] = useState(false);
   const [lastResults, setLastResults] = useState([]);
   const [webUrl, setWebUrl] = useState(
-    "https://go.aff.bullsbetaffiliate.com/rrhgu2ry"
+    "https://zika.bet/register?code=7HIRQAPPZX"
   );
   const [loadingMessage, setLoadingMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");

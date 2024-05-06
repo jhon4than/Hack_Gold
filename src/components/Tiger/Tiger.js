@@ -10,7 +10,7 @@ function Tiger() {
   const [isTimerActive, setIsTimerActive] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [webUrl, setWebUrl] = useState(
-    "https://go.aff.bullsbetaffiliate.com/rrhgu2ry"
+    "https://zika.bet/register?code=7HIRQAPPZX"
   );
 
   useEffect(() => {
